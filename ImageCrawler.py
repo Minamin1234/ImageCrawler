@@ -117,7 +117,6 @@ def CollectImages(count,keyw,dir,dir_temp,dir_filter,removefiles=False):
     num = count
   while True:
     if CountFile(dir) < count:
-      #RemoveAllFiles(Temp_cat)
       crawler = BingImageCrawler(storage={"root_dir": dir_temp})
       crawler.crawl(keyword=keyw,max_num=num)
       AssignNumber(dir_temp,pre="_")
